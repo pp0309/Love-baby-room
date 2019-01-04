@@ -1,3 +1,5 @@
+
+$(function(){
 $('.mosttop p a').each(function(){
 $(this).hover(function(){
 	$(this).css({'color':'red','text-decoration': 'underline'})},
@@ -73,13 +75,21 @@ $('.header ol li a').each(function(){
 		$(this).css({'color':'#666'})
 	})
 })
+$('.navtree .navtreeul div').hover(function(){
+	$(this).css({'display':'block'})
+	
+},function(){
+	$(this).css({'display':'none'})
+})
+
 $('.navtree li h3').each(function(){
 	$(this).hover(function(){
-		$(this).css({'color':'red'})
+		$(this).css({'color':'red','border-right':0,'z-Index':'12'})
 		$(this).children('span').css({'backgroundPositionY':'-130px'})
 		$(this).parent('li').next('div').css({'display':'block'})
+		
 },function(){
-	$(this).css({'color':'#666'})
+	$(this).css({'color':'#666','border-right':'1px solid #c1c1df','z-Index':'3'})
 	$(this).parent('li').next('div').css({'display':'none'})
 		$(this).children('span').css({'backgroundPositionY':'-91px'})
 })
@@ -93,5 +103,45 @@ $('.navtree li h4').hover(function(){
 	$(this).parent('li').next('div').css({'display':'none'})
 	$(this).css({'color':'#fff',"background":'#4c676a'})
 		$(this).children('span').css({'backgroundPositionY':'-91px'})
+});
+(function(){
+	var go=document.getElementById("goup");
+	
+	document.onscroll=function(){
+		var topx=document.documentElement.scrollTop||document.body.scrollTop
+		if(topx<500){
+			go.style.display='none'
+		}else{
+			go.style.display='block'
+		}
+		go.onclick=function(){
+			document.documentElement.scrollTop=0
+			
+		}
+	}
+})();
+//二级菜单
+$.getJSON("../first.json",function(data){
+	var sho1=document.getElementById('show11')
+	for(var i in data){		
+		for(var a in data[i]){
+			var dl=document.createElement('dl');
+		var dt=document.createElement('dt');
+		dt.innerHTML=data[i][a][0]	
+		dl.appendChild(dt)
+		for(var c=1,le=data[i][a].length;c<le;c++){
+			var dd=document.createElement('dd')
+				dd.innerHTML=data[i][a][c]
+				dl.appendChild(dd)
+			}
+		sho1.appendChild(dl)
+		}
+		
+	}
+	
 })
+//一级菜单
 
+$('#cd').on({"click":function(){$('#cd1').css({'display':'none'})},"mouseenter":function(){$('#cd1').css({'display':'block'})}});
+
+})

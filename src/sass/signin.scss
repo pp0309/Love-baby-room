@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+.bottom{width: 1200px;height: 150px;margin: 0 auto;
+.bottomul{font: 14px/1  "微软雅黑";height: 14px;margin: 10px auto;width: 600px;
+li{float: left;padding: 0 10px;border-right:1px solid #CDCDCD ;a{color: #7f7f7f;}
+a:hover{color: red;text-decoration:underline;}}}
+.bottomd{width: 656px;font: 14px/25px "微软雅黑";height: 25px;margin: 0 auto;}
+.bottomdiv{width: 400px;height:60px ;margin: 0 auto;margin-top: 40px;
+a:hover{color: red;text-decoration:underline;}
+a{float: left;height:60px ;display: block;font: 14px/20px "微软雅黑";margin-left: 15px;color:#cdcdcd;
+p{height:50px ;width: 132px;float: right;margin-left: 10px;margin-top: 10px;}}}}
+
+.top{width: 963px;margin: 0 auto;padding: 10px;
+.toppic{width: 140px;height: 60px;
+img{width: 140px;height: 60px;}}
+.topp{height: 31px;background: url(../homeimg/zuce_05.jpg) no-repeat;}
+.topbo{height: 360px;border: 1px solid skyblue;
+form{width: 586px;margin: 60px auto;
+ul{width: 116px;height: 300px;float: left;li{text-align: right;height: 45px;font: 16px/45px "微软雅黑";}}
+ol{float: left;
+li{height: 45px;font: 16px/45px "微软雅黑";
+input{vertical-align: middle;outline: 0;}}
+li:nth-of-type(1) input{width: 200px;height: 20px;}
+li:nth-of-type(2) input{width: 200px;height: 20px;}
+li:nth-of-type(4) a{
+display: block;width: 119px;height: 34px;float: left;margin-right: 15px;}
+li:nth-of-type(4) a:nth-of-type(1){
+background:url(../homeimg/zuce_09.jpg) no-repeat ;}
+li:nth-of-type(4) a:nth-of-type(2){
+background:url(../homeimg/dldl.jpg)no-repeat ;}
+}}}}
